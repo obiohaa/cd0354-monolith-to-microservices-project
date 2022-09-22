@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udagram-api-feed
+  labels:
+    app: udagram-api-feed
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: udagram-api-feed
+  template:
+    metadata:
+      labels:
+        app: udagram-api-feed
+    spec:
+      containers:
+      - name: udagram-api-feed
+        image: obiohaa/udagram-api-feed:latest
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
+        resources:
+          requests:
+            cpu: "250m"
+          limits:
+            cpu: "500m"
+        env:
+          - name: POSTGRES_HOST
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: POSTGRES_HOST
+          - name: POSTGRES_DB
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: POSTGRES_DB
+          - name: AWS_BUCKET
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: AWS_BUCKET
+          - name: AWS_REGION
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: AWS_REGION
+          - name: URL
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: URL
+          - name: POSTGRES_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: env-secret
+                key: POSTGRES_USERNAME
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: env-secret
+                key: POSTGRES_PASSWORD
+          - name: aws_key_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: aws-secret
+                key: aws_key_USERNAME
+          - name: aws_key_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: aws-secret
+                key: aws_key_PASSWORD
