@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: obiohaa/udagram-frontend:latest
+        image: obiohaa/udagram-frontend:latestv2
         ports:
         - containerPort: 80
         resources:
