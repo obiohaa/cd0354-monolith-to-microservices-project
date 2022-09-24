@@ -8,4 +8,4 @@ export AWS_BUCKET=obioha-s3-bucket
 export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=project3ALX
-export URL=http://localhost:8080
+export URL=http://localhost:8100
