@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: obiohaa/udagram-api-feed:latest
+        image: obiohaa/udagram-api-feed:latestv2
         imagePullPolicy: Always
         ports:
           - containerPort: 80

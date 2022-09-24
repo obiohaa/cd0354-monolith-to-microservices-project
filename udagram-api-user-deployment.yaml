@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-user
-        image: obiohaa/udagram-api-user:latest
+        image: obiohaa/udagram-api-user:latestv2
         ports:
         - containerPort: 80
         resources:
