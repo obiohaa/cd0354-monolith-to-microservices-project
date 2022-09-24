@@ -2,10 +2,10 @@
 # DO NOT STORE YOUR CREDENTIALS INTO GIT
 export POSTGRES_USERNAME=postgres
 export POSTGRES_PASSWORD=Fidelity200215.
-export POSTGRES_HOST=obiohadbs.cdycvwke7s44.us-east-1.rds.amazonaws.com
+export POSTGRES_HOST=postgres.cml1eiflgva1.us-east-1.rds.amazonaws.com
 export POSTGRES_DB=postgres
 export AWS_BUCKET=obioha-s3-bucket
 export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=project3ALX
-export URL=http://localhost:8100
+export URL=http://localhost:8080
