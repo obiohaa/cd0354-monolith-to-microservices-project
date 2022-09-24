@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
     name: env-configmap
 data: 
-     POSTGRES_HOST: obiohadbs.cdycvwke7s44.us-east-1.rds.amazonaws.com
+     POSTGRES_HOST: postgres.cml1eiflgva1.us-east-1.rds.amazonaws.com
      POSTGRES_DB: postgres
      AWS_BUCKET: obioha-s3-bucket
      AWS_REGION: us-east-1
