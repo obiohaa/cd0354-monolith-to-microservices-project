@@ -18,11 +18,11 @@ script:
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker tag udagram-api-feed obiohaa/udagram-api-feed:latestv2
   - docker build -t udagram-frontend ./udagram-frontend
-  - docker tag udagram-frontend obiohaa/udagram-frontend:latestv4
+  - docker tag udagram-frontend obiohaa/udagram-frontend:latestv5
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push obiohaa/reverseproxy:latestv2
   - docker push obiohaa/udagram-api-user:latestv2
   - docker push obiohaa/udagram-api-feed:latestv2
-  - docker push obiohaa/udagram-frontend:latestv4
+  - docker push obiohaa/udagram-frontend:latestv5
