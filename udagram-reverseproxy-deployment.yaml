@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: obiohaa/reverseproxy:latestv3
+        image: obiohaa/reverseproxy:latestv4
         imagePullPolicy: Always
         resources:
           requests:
