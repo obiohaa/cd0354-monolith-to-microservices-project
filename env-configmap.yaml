@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
     name: env-configmap
 data: 
-     POSTGRES_HOST: postgres.cml1eiflgva1.us-east-1.rds.amazonaws.com
+     POSTGRES_HOST: brown.cxbrwytjq841.us-east-1.rds.amazonaws.com
      POSTGRES_DB: postgres
-     AWS_BUCKET: obioha-s3-bucket
+     AWS_BUCKET: bucketobi
      AWS_REGION: us-east-1
      AWS_PROFILE: default
      JWT_SECRET: project3ALX
